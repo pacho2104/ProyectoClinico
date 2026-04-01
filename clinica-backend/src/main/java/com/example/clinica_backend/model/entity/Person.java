@@ -1,4 +1,4 @@
-package com.example.clinica_backend.model;
+package com.example.clinica_backend.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -16,7 +15,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
-public class Persons {
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
