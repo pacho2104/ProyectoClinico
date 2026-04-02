@@ -68,6 +68,4 @@ public class Person {
     @Column(name = "is_active", nullable = false)
     private Boolean isActive;
 
-
-
 }
