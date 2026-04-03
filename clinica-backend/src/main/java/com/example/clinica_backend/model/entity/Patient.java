@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Patient {
 
     @Id
-    private UUID ID;
+    private UUID id;
 
     @OneToOne
     @MapsId
