@@ -1,22 +1,25 @@
 package com.example.clinica_backend.model.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.UUID;
 
+
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @Entity
 public class Patient {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @OneToOne
-    @JoinColumn(name = "id",nullable = false,unique = true)
+    @MapsId
+    @JoinColumn(name = "id")
     private Person person;
-
 }
