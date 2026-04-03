@@ -23,7 +23,7 @@ public class Person {
     @Column(name = "document_type", length = 40, nullable = true)
     private String documentType;
 
-    @Column(name = "document_number",length = 40, nullable = true)
+    @Column(name = "document_number",length = 40, nullable = true, unique = true)
     private String documentNumber;
 
     @Column(name = "first_name",length = 200, nullable = false)
