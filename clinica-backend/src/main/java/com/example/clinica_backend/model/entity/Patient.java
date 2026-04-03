@@ -1,13 +1,12 @@
 package com.example.clinica_backend.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.UUID;
 
 
 @Getter @Setter
@@ -16,6 +15,11 @@ import lombok.Setter;
 @Entity
 public class Patient {
 
-
+    @Id
     private UUID ID;
+
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "id")
+    private Person person;
 }
