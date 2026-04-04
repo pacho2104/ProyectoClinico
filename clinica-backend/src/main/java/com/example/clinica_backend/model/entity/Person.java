@@ -20,7 +20,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(name = "document_type", length = 40, nullable = true)
+    @Column(name = "document_type", length = 40, nullable = false)
     private String documentType;
 
     @Column(name = "document_number",length = 40, nullable = true)
