@@ -1,5 +1,7 @@
 package com.example.clinica_backend.util;
 
+import java.util.List;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,6 +10,7 @@ import lombok.Data;
 public class ResponseBase<T> {
 
     private boolean success;
+    private List<String> errors;
     private String message;
     private T data;
 
@@ -31,6 +34,13 @@ public class ResponseBase<T> {
         return ResponseBase.<T>builder()
                 .success(false)
                 .message(message)
+                .build();
+    }
+
+    public static <T> ResponseBase<T> error(List<String> errors) {
+        return ResponseBase.<T>builder()
+                .success(false)
+                .errors(errors)
                 .build();
     }
 

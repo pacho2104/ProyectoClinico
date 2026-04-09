@@ -1,4 +1,4 @@
-package com.example.clinica_backend.config;
+package com.example.clinica_backend.exception;
 
 public class BusinessException extends RuntimeException {
 

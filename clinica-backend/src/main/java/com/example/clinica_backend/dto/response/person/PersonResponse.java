@@ -1,4 +1,6 @@
-package com.example.clinica_backend.model.dto.person;
+package com.example.clinica_backend.dto.response.person;
+
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,14 +11,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class PersonRequest {
+public class PersonResponse {
 
+    private Long id;
     private String documentType;
     private String documentNumber;
     private String firstName;
     private String lastName;
     private String sex;
-    private String birthDay;
+    private LocalDate birthDay;
     private String phoneNumber;
     private String address;
     private String email;
