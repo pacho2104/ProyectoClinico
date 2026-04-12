@@ -1,24 +1,19 @@
-<<<<<<<< HEAD:clinica-backend/src/main/java/com/example/clinica_backend/model/dto/request/person/PersonRequest.java
-package com.example.clinica_backend.model.dto.request.person;
-========
-package com.example.clinica_backend.dto.request.person;
+package com.example.clinica_backend.dto.response.person;
 
 import java.time.LocalDate;
->>>>>>>> dev:clinica-backend/src/main/java/com/example/clinica_backend/dto/request/person/PersonRequest.java
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class PersonRequest {
+public class PersonResponse {
 
+    private Long id;
     private String documentType;
     private String documentNumber;
     private String firstName;
