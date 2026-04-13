@@ -14,6 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@Table(name = "catalogs")
 public class Catalog {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
